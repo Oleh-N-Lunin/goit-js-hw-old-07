@@ -8,7 +8,7 @@
 
 // Категория: Животные
 // Количество элементов: 4
-
+"use strict";
 
 const categoryRef = document.querySelectorAll(`.item`);
 categoryRef.forEach(item => console.log(`В списке 3 категории` +`.item`));
