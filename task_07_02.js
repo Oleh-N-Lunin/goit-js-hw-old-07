@@ -14,3 +14,12 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
+
+
+const ingredList = document.getElementById(`ingredients`);
+console.log(ingredList);
+
+const elemRef = document.createElement(`li`);
+elemRef.classList.add(`items`);
+
+ingredList.append(elemRef);
