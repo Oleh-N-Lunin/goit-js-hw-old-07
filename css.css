@@ -1,0 +1,12 @@
+.pictures {
+  display: flex;
+}
+.pic {
+  display: flex;
+  justify-content: center;
+}
+
+.cat {
+  width: 150px;
+  height: 150px;
+}
