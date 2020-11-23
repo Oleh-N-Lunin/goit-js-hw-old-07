@@ -16,10 +16,13 @@ const ingredients = [
 ];
 
 
-const ingredList = document.getElementById(`ingredients`);
-console.log(ingredList);
+const ingredient = ingredients.map((element) => {
+  const item = document.createElement(`li`);
+  item.textContent = element;
+  return item;
+  });
 
-const elemRef = document.createElement(`li`);
-elemRef.classList.add(`items`);
-
-ingredList.append(elemRef);
+const getNodeListToString = function (nodesList) {
+   return nodesList.map(element => element.outerHTML).join('');
+ }    
+ document.querySelector("#ingredients").insertAdjacentHTML('afterbegin',getNodeListToString(ingredient));
