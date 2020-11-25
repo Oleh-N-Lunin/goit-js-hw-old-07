@@ -8,8 +8,24 @@
 Добавь слушатели кликов на кнопки, вызовы функций и
 обновление интерфейса*/
 
-const decrement = document.querySelector('decrement');
-const increment = document.querySelector('increment');
-const value = document.querySelector('#value');
+let value = 0;
 
-console.log('decrement');
+function render() {
+    counter.counterValue.textContent = value;
+}
+
+const counter = {
+    btnDecrement: document.querySelector('button[data-action="decrement"]'),
+    btnIncrement: document.querySelector('button[data-action="increment"]'),
+    counterValue: document.querySelector('#value'),
+};
+
+counter.btnDecrement.addEventListener('click', () => {
+    value -= 1;
+    render();
+});
+
+counter.btnIncrement.addEventListener('click', () => {
+    value += 1;
+    render();
+});
