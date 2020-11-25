@@ -8,3 +8,8 @@
 Добавь слушатели кликов на кнопки, вызовы функций и
 обновление интерфейса*/
 
+const decrement = document.querySelector('decrement');
+const increment = document.querySelector('increment');
+const value = document.querySelector('#value');
+
+console.log('decrement');
