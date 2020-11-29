@@ -26,3 +26,18 @@
   border-color: #f44336;
 }
 */
+
+const inputRef = document.querySelector('#validation-input');
+const lenghtValue = inputRef.dataset.length;
+
+const onFocusHandler = () => { 
+  const length = inputRef.value.length;
+  if (length === +lenghtValue) {
+    inputRef.classList.add('valid')
+  } else {
+    inputRef.classList.add('invalid')
+  }
+} 
+
+inputRef.addEventListener("focusout", onFocusHandler) 
+console.log(lenghtValue);
